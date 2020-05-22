@@ -195,8 +195,12 @@ a{
   }
 
 .designBy{
-    display: flex;
-    justify-content: center;
     margin-top: 50px;
     font-style: italic;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px;
 }
