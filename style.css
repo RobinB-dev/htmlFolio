@@ -140,7 +140,96 @@ a{
 .note{
     text-align: end;
     width: 115px;
+    position: relative;
 }
+
+.note .info{
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    font-size: 8px;
+    font-weight: 900;
+    color: #747474;
+    border: 1px solid #747474;
+    /* background: red; */
+    text-align: center;
+    align-items: center;
+    cursor: default;
+}
+
+.detailNote {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    justify-content: space-around;
+    background-color: #ffff;
+    color: #747474;
+    text-align: center;
+    border-radius: 6px;
+    z-index: 1;
+    font-size: 80%;
+    top: 35px;
+    right: -20px;
+    position: absolute;
+    border: 2px solid ;
+    opacity: 0;
+    /* pointer-events: none; */
+}
+
+.detailNote::after, .detailNote::before {
+    content: "";
+    bottom: 100%;
+    right: 30px;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+.detailNote::after {
+    border-bottom-color: #ffffff;
+    border-width: 13px;
+    margin-right: -13px;
+    bottom: calc(100% - 1px);
+}
+.detailNote::before {
+    border-bottom-color: #747474;
+    border-width: 15px;
+    margin-right: -15px;
+    /* top: calc(100% - 1px); */
+}
+
+.note .info:hover ~ .detailNote{
+    /* display: block; */
+    pointer-events: all;
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.detailNote .titleCategory{
+    font-size: 12px;
+}
+
+.detailNote .noteCategory{
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.detailNote .noteCategory span{
+    font-size: 8px;
+    font-weight: 200;
+}
+
+.spaceCategory{
+    width: 1px;
+    height: 28px;
+    border-radius: 10px;
+    background: #747474;
+}
+
 
 .icon{
     display: flex;
